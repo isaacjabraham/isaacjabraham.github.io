@@ -73,7 +73,6 @@ h1{
   line-height:.98;letter-spacing:-.01em;
   text-transform:uppercase;color:var(--silk);
 }
-h1 .cu{color:var(--copper-bright)}
 .sub{
   margin-top:22px;max-width:620px;color:var(--silk-dim);font-size:1.05rem;
 }
@@ -157,6 +156,12 @@ section{padding:90px 7vw;position:relative;z-index:1;max-width:1200px;margin:0 a
   background:rgba(208,140,63,.12);color:var(--copper-bright);border:1px solid rgba(208,140,63,.3);
 }
 
+/* ---------- PROJECT READOUTS ---------- */
+.readouts{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0 14px}
+.readout{flex:1 1 150px;background:var(--mask-deep);border:1px solid rgba(208,140,63,.3);border-radius:6px;padding:12px 14px}
+.readout .val{font-family:'IBM Plex Mono',monospace;font-size:1.5rem;font-weight:600;color:var(--ok);line-height:1.2}
+.readout .lbl{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.08em;color:var(--silk-dim);text-transform:uppercase}
+
 /* ---------- SKILLS PINOUT ---------- */
 .pinout{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
 .pin-group{background:var(--pad);border:1px solid rgba(208,140,63,.22);border-radius:8px;padding:24px}
@@ -214,6 +219,7 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
   <div class="links">
     <a href="#education">Education</a>
     <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
     <a href="#honors">Honors</a>
     <a href="#writing">Writing</a>
     <a href="#skills">Skills</a>
@@ -223,8 +229,8 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
 
 <header id="top">
   <div class="eyebrow">Rice University · Electrical &amp; Computer Engineering</div>
-  <h1>Isaac<br>Abra<span class="cu">ham</span></h1>
-  <p class="sub"><strong>Aspiring electrical and computer engineer, drawn to the chips that power AI systems.</strong> From ML-driven ballot analysis at Rice to ransomware defense research at Cisco, I build circuits and code that serve people fairly, and I write about the ethics of the algorithms we deploy.</p>
+  <h1>Isaac<br>Abraham</h1>
+  <p class="sub"><strong>Aspiring electrical and computer engineer, drawn to the chips that power AI systems.</strong> From volumetric capture systems in Rice's EXP Lab and race car wiring with Rice SAE to ransomware defense research at Cisco, I build circuits and code that serve people fairly, and I write about the ethics of the algorithms we deploy.</p>
   <div class="hero-cta">
     <a class="btn btn-solid" href="#experience">View experience</a>
     <a class="btn btn-ghost" href="https://www.linkedin.com/in/-isaacabraham" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -239,13 +245,13 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
   <div class="edu-grid">
     <div class="pad-card">
       <h3>Rice University</h3>
-      <div class="meta">B.E. ELECTRICAL &amp; COMPUTER ENGINEERING · 2025 – 2029</div>
-      <p>George R. Brown School of Engineering, Houston, TX. Pursuing coursework and research across ML, systems, and human-computer interaction.</p>
+      <div class="meta">B.S. ELECTRICAL &amp; COMPUTER ENGINEERING · 2025 – 2029</div>
+      <p>George R. Brown School of Engineering, Houston, TX. Pursuing coursework and research across ML and distributed capture systems.</p>
     </div>
     <div class="pad-card">
       <h3>The Hun School of Princeton</h3>
       <div class="meta">2021 – 2025 · GPA 96.15% · ACT 35</div>
-      <p>Princeton, NJ. Graduated with a strong STEM foundation alongside research programs, tutoring, and community teaching.</p>
+      <p>Princeton, NJ. Graduated with a strong STEM foundation alongside research programs, tutoring, and volunteering for the local community.</p>
     </div>
   </div>
 </section>
@@ -260,11 +266,33 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
     </svg>
 
     <article class="component">
+      <div class="designator">CAM1</div>
+      <h3>Researcher · <span class="org"><a href="https://pixels.rice.edu/" target="_blank" rel="noopener" style="color:inherit">Experiential Pixels (EXP) Lab, Rice University</a></span></h3>
+      <div class="when">September 2026 – Present · Houston, TX</div>
+      <ul>
+        <li>Contributing to the Volcap volumetric capture rig, synchronizing and calibrating its lasers and video cameras through a web app.</li>
+        <li>Developing parts of a distributed capture system: Android camera control, a browser-based calibration system, and networking across capture devices.</li>
+      </ul>
+      <span class="tagchip">VOLUMETRIC CAPTURE</span><span class="tagchip">CALIBRATION</span><span class="tagchip">DISTRIBUTED SYSTEMS</span>
+    </article>
+
+    <article class="component">
+      <div class="designator">ECU1</div>
+      <h3>Electrical Subteam Member · <span class="org"><a href="https://www.riceracing.org/" target="_blank" rel="noopener" style="color:inherit">Rice Racing (SAE)</a></span></h3>
+      <div class="when">September 2026 – Present · Houston, TX</div>
+      <ul>
+        <li>Wiring the race car's electrical system with the electrical subteam, connecting the ECU, sensors, and other vehicle electronics.</li>
+        <li>Building hands-on knowledge of automotive electrical components, including ECU operation and sensor integration.</li>
+      </ul>
+      <span class="tagchip">WIRING</span><span class="tagchip">ECU</span><span class="tagchip">SENSORS</span>
+    </article>
+
+    <article class="component">
       <div class="designator">U1</div>
-      <h3>Researcher · <span class="org">Computer-Human Interaction Laboratory, Rice University</span></h3>
+      <h3>Researcher · <span class="org"><a href="http://chil.rice.edu/" target="_blank" rel="noopener" style="color:inherit">Computer-Human Interaction Laboratory, Rice University</a></span></h3>
       <div class="when">January 2026 – May 2026</div>
       <ul>
-        <li>Developing a machine learning algorithm under Dr. Michael Byrne to parse and classify PDF voting ballot components, improving electoral system efficiency and accuracy.</li>
+        <li>Developed a machine learning algorithm under Dr. Michael Byrne to parse and classify PDF voting ballot components, improving electoral system efficiency and accuracy.</li>
         <li>Implemented object detection techniques, including circularity-based formulas and size normalization, to identify voting ovals and text fields within PDF documents.</li>
       </ul>
       <span class="tagchip">MACHINE LEARNING</span><span class="tagchip">OBJECT DETECTION</span><span class="tagchip">CIVIC TECH</span>
@@ -351,8 +379,26 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
   </div>
 </section>
 
+<section id="projects">
+  <div class="sec-head"><span class="ref mono">SEC/03</span><h2>Projects</h2></div>
+  <p class="sec-sub">Self-directed builds, tested honestly.</p>
+  <div class="pad-card">
+    <h3>Deepfake Video Detector</h3>
+    <div class="meta">NEURAL NETWORK · PYTHON / PYTORCH · SUMMER 2026</div>
+    <p>A deep learning model that estimates the probability a video is AI-generated. A pretrained EfficientNet-B0 backbone encodes each frame, and a temporal transformer looks across the frame sequence for inconsistencies like flicker and identity drift. The preprocessing pipeline handles frame sampling, resizing, ImageNet normalization, and augmentation across ~60,000 frames from 1,800+ videos, with actor-level splits so the model is tested on people it never saw in training.</p>
+    <div class="readouts">
+      <div class="readout"><div class="val">74%</div><div class="lbl">Real videos cleared</div></div>
+      <div class="readout"><div class="val">62%</div><div class="lbl">Unseen deepfakes caught</div></div>
+      <div class="readout"><div class="val">6</div><div class="lbl">Held-out actors (DFD)</div></div>
+    </div>
+    <p>Key lesson: detectors learn the patterns of specific generation tools in the training set, but not what makes a video fake in general. So cross-dataset generalization and false positives on real videos are the metrics that matter most.</p>
+    <span class="tagchip">PYTORCH</span><span class="tagchip">COMPUTER VISION</span><span class="tagchip">TRANSFORMERS</span>
+    <div><a class="btn btn-ghost" style="display:inline-block;margin-top:18px" href="https://github.com/isaacjabraham/deepfake-video-detector" target="_blank" rel="noopener">View on GitHub ↗</a></div>
+  </div>
+</section>
+
 <section id="honors">
-  <div class="sec-head"><span class="ref mono">SEC/03</span><h2>Honors &amp; Awards</h2></div>
+  <div class="sec-head"><span class="ref mono">SEC/04</span><h2>Honors &amp; Awards</h2></div>
   <p class="sec-sub">Recognition across engineering, research, and writing.</p>
   <div class="edu-grid">
     <div class="pad-card">
@@ -390,7 +436,7 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
 </section>
 
 <section id="writing">
-  <div class="sec-head"><span class="ref mono">SEC/04</span><h2>Writing &amp; Research</h2></div>
+  <div class="sec-head"><span class="ref mono">SEC/05</span><h2>Writing &amp; Research</h2></div>
   <p class="sec-sub">Published thinking on where AI, work, and education intersect.</p>
   <div class="edu-grid">
     <div class="pad-card">
@@ -416,7 +462,7 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
 </section>
 
 <section id="skills">
-  <div class="sec-head"><span class="ref mono">SEC/05</span><h2>Skills Pinout</h2></div>
+  <div class="sec-head"><span class="ref mono">SEC/06</span><h2>Skills Pinout</h2></div>
   <p class="sec-sub">Tools and languages, mapped like the pins of a chip.</p>
   <div class="pinout">
     <div class="pin-group">
@@ -427,9 +473,16 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
     </div>
     <div class="pin-group">
       <h3>Tools &amp; Platforms</h3>
-      <div class="pin">Splunk <span class="lvl">PIN 4</span></div>
-      <div class="pin">Xcalibur <span class="lvl">PIN 5</span></div>
-      <div class="pin">Word · Excel · Outlook <span class="lvl">PIN 6</span></div>
+      <div class="pin">PyTorch <span class="lvl">PIN 4</span></div>
+      <div class="pin">Splunk <span class="lvl">PIN 5</span></div>
+      <div class="pin">Xcalibur <span class="lvl">PIN 6</span></div>
+      <div class="pin">Word · Excel · Outlook <span class="lvl">PIN 7</span></div>
+    </div>
+    <div class="pin-group">
+      <h3>Hardware &amp; EE</h3>
+      <div class="pin">Verilog <span class="lvl">PIN 8</span></div>
+      <div class="pin">MATLAB <span class="lvl">PIN 9</span></div>
+      <div class="pin">Breadboard Design <span class="lvl">PIN 10</span></div>
     </div>
     <div class="pin-group">
       <h3>Languages</h3>
@@ -440,7 +493,7 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
   </div>
 
   <div style="margin-top:60px">
-    <div class="sec-head"><span class="ref mono">SEC/06</span><h2 style="font-size:1.3rem">Off the Board</h2></div>
+    <div class="sec-head"><span class="ref mono">SEC/07</span><h2 style="font-size:1.3rem">Off the Board</h2></div>
     <div class="chips">
       <span>Piano · 13 yrs</span><span>Vibraphone</span><span>Swimming · 12 yrs</span>
       <span>Rowing</span><span>Figure skating</span><span>AI &amp; Ethics</span>
@@ -456,7 +509,7 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
     <a class="btn btn-solid" href="mailto:Isaac.Abraham@rice.edu">Isaac.Abraham@rice.edu</a>
     <a class="btn btn-ghost" href="https://www.linkedin.com/in/-isaacabraham" target="_blank" rel="noopener">LinkedIn ↗</a>
   </div>
-  <div class="foot-note">ISAAC ABRAHAM · REV 1.0 · DESIGNED LIKE A BOARD, BUILT FOR PEOPLE</div>
+  <div class="foot-note">ISAAC ABRAHAM · REV 1.1 · DESIGNED LIKE A BOARD, BUILT FOR PEOPLE</div>
 </footer>
 
 <script>
