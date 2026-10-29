@@ -230,7 +230,7 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
 <header id="top">
   <div class="eyebrow">Rice University · Electrical &amp; Computer Engineering</div>
   <h1>Isaac<br>Abraham</h1>
-  <p class="sub"><strong>Aspiring electrical and computer engineer, drawn to the chips that power AI systems.</strong> From volumetric capture systems in Rice's EXP Lab and race car wiring with Rice SAE to ransomware defense research at Cisco, I build circuits and code that serve people fairly, and I write about the ethics of the algorithms we deploy.</p>
+  <p class="sub"><strong>Aspiring electrical and computer engineer, drawn to the chips that power AI systems.</strong> From supporting embedded systems labs as an ELEC 220 course assistant and building volumetric capture systems in Rice's EXP Lab to race car wiring with Rice SAE to ransomware defense research at Cisco, I build circuits and code that serve people fairly, and I write about the ethics of the algorithms we deploy.</p>
   <div class="hero-cta">
     <a class="btn btn-solid" href="#experience">View experience</a>
     <a class="btn btn-ghost" href="https://www.linkedin.com/in/-isaacabraham" target="_blank" rel="noopener">LinkedIn ↗</a>
@@ -264,6 +264,17 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
     <svg id="traceSvg" aria-hidden="true">
       <path id="tracePath" d="" fill="none" stroke="var(--copper)" stroke-width="2.5" stroke-linecap="round"/>
     </svg>
+
+    <article class="component">
+      <div class="designator">MCU1</div>
+      <h3>Course Assistant · <span class="org"><a href="https://ga.rice.edu/programs-study/courses/elec/" target="_blank" rel="noopener" style="color:inherit">ELEC 220: Fundamentals of Computer Engineering, Rice University</a></span></h3>
+      <div class="when">September 2026 – Present · Houston, TX</div>
+      <ul>
+        <li>Supporting students through the course's hands-on labs in computer organization, I/O, and interrupts.</li>
+        <li>Improving course labs for the <a href="https://www.nordicsemi.com/Products/Development-hardware/nRF54LM20-DK" target="_blank" rel="noopener" style="color:var(--copper-bright)">Nordic nRF54LM20 development kits</a> that Nordic Semiconductor provided for the class.</li>
+      </ul>
+      <span class="tagchip">EMBEDDED SYSTEMS</span><span class="tagchip">TEACHING</span><span class="tagchip">NORDIC nRF54</span>
+    </article>
 
     <article class="component">
       <div class="designator">CAM1</div>
@@ -383,6 +394,20 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
   <div class="sec-head"><span class="ref mono">SEC/03</span><h2>Projects</h2></div>
   <p class="sec-sub">Self-directed builds, tested honestly.</p>
   <div class="pad-card">
+    <h3>Mini Piano PCB</h3>
+    <div class="meta">PCB DESIGN · KICAD · 555 TIMER · FALL 2026</div>
+    <img src="https://raw.githubusercontent.com/ia31/mini-piano-pcb/main/PCB%20Design.png" alt="3D render of the mini piano PCB" loading="lazy" style="display:block;max-width:100%;height:auto;border-radius:6px;border:1px solid rgba(208,140,63,.3);margin:4px 0 16px">
+    <p>A five-key electronic piano I designed in KiCad for ELEC 240. An LMC555 timer runs in astable mode, and each key selects a different timing resistance to set the frequency of the square wave driving a piezo buzzer.</p>
+    <div class="readouts">
+      <div class="readout"><div class="val">5</div><div class="lbl">Keys, C major pentatonic</div></div>
+      <div class="readout"><div class="val">536–907</div><div class="lbl">Hz note range (theoretical)</div></div>
+      <div class="readout"><div class="val">0</div><div class="lbl">Vias on a 2-layer board</div></div>
+    </div>
+    <p>The fun part: instead of giving each key its own resistor, R2 through R6 form a single series ladder, and each key taps a different point on it. Five standard resistor values make five notes, pressing two keys gives high-note priority for free, and the pentatonic scale means there is no wrong note. The design is complete, and I'm soldering and testing the board this semester.</p>
+    <span class="tagchip">KICAD</span><span class="tagchip">PCB DESIGN</span><span class="tagchip">555 TIMER</span><span class="tagchip">ANALOG</span>
+    <div><a class="btn btn-ghost" style="display:inline-block;margin-top:18px" href="https://github.com/ia31/mini-piano-pcb" target="_blank" rel="noopener">View on GitHub ↗</a></div>
+  </div>
+  <div class="pad-card" style="margin-top:22px">
     <h3>Deepfake Video Detector</h3>
     <div class="meta">NEURAL NETWORK · PYTHON / PYTORCH · SUMMER 2026</div>
     <p>A deep learning model that estimates the probability a video is AI-generated. A pretrained EfficientNet-B0 backbone encodes each frame, and a temporal transformer looks across the frame sequence for inconsistencies like flicker and identity drift. The preprocessing pipeline handles frame sampling, resizing, ImageNet normalization, and augmentation across ~60,000 frames from 1,800+ videos, with actor-level splits so the model is tested on people it never saw in training.</p>
