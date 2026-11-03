@@ -211,6 +211,7 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
   .component{opacity:1;transform:none}
 }
 </style>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
 </head>
 <body>
 
@@ -396,7 +397,8 @@ footer p{color:var(--silk-dim);margin-bottom:26px}
   <div class="pad-card">
     <h3>Mini Piano PCB</h3>
     <div class="meta">PCB DESIGN · KICAD · 555 TIMER · FALL 2026</div>
-    <img src="https://raw.githubusercontent.com/ia31/mini-piano-pcb/main/PCB%20Design.png" alt="3D render of the mini piano PCB" loading="lazy" style="display:block;max-width:100%;height:auto;border-radius:6px;border:1px solid rgba(208,140,63,.3);margin:4px 0 16px">
+    <model-viewer src="piano.glb" poster="https://raw.githubusercontent.com/ia31/mini-piano-pcb/main/PCB%20Design.png" alt="Interactive 3D model of the mini piano PCB" camera-controls touch-action="pan-y" auto-rotate auto-rotate-delay="3000" rotation-per-second="20deg" interaction-prompt="auto" shadow-intensity="0.6" exposure="1.1" style="display:block;width:100%;height:380px;border-radius:6px;border:1px solid rgba(208,140,63,.3);margin:4px 0 6px;background:radial-gradient(circle at 50% 40%,#2a3a52,#0f1a2b);--poster-color:transparent"></model-viewer>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;color:#8a9bb3;margin-bottom:16px">DRAG TO ROTATE · SCROLL TO ZOOM · RIGHT-DRAG TO PAN</div>
     <p>A five-key electronic piano I designed in KiCad for ELEC 240. An LMC555 timer runs in astable mode, and each key selects a different timing resistance to set the frequency of the square wave driving a piezo buzzer.</p>
     <div class="readouts">
       <div class="readout"><div class="val">5</div><div class="lbl">Keys, C major pentatonic</div></div>
